@@ -11,6 +11,7 @@ def index(request):
 def birthday(request):
     bday = Birthday.objects.all().values()
     birthday_list = list(bday)
+    print("bday data", birthday_list)
     return JsonResponse(birthday_list, safe=False)
 
 # TODO: in a view for a request for birthday data
